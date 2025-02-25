@@ -1,21 +1,23 @@
 {
   "private": true,
   "scripts": {
-    "build": "next build",
+    "copy-images": "node scripts/copy-obsidian-images.js",
+    "build": "npm run copy-images && next build",
     "dev": "next dev",
     "start": "next start"
   },
   "dependencies": {
     "date-fns": "^2.29.3",
     "gray-matter": "^4.0.3",
-    "next": "latest",
-    "react": "18.2.0",
-    "react-dom": "18.2.0",
+    "next": "15.1.6",
+    "react": "^19.0.0",
+    "react-dom": "^19.0.0",
     "react-markdown": "^9.0.1",
     "react-syntax-highlighter": "^15.5.0",
     "remark": "^14.0.2",
     "remark-gfm": "^4.0.0",
-    "remark-html": "^15.0.1"
+    "remark-html": "^15.0.1",
+    "sass": "^1.85.0"
   },
   "engines": {
     "node": ">=18"
