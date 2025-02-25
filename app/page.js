@@ -1,5 +1,4 @@
 import Head from "next/head";
-import Layout from "../components/blog/layout";
 import utilStyles from "../styles/utils.module.css";
 
 export default function Home() {

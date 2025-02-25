@@ -5,7 +5,8 @@ import { getSortedPostsData } from "../../lib/posts";
 import Link from "next/link";
 import Date from "../../components/date";
 
-export default function Home({ allPostsData }) {
+export default function Home() {
+  const allPostsData = getSortedPostsData();
   return (
     <Layout home>
       <Head>
@@ -27,13 +28,4 @@ export default function Home({ allPostsData }) {
       </section>
     </Layout>
   );
-}
-
-export async function getStaticProps() {
-  const allPostsData = getSortedPostsData();
-  return {
-    props: {
-      allPostsData,
-    },
-  };
 }

@@ -1,13 +1,13 @@
-import Layout from "../../components/blog/layout";
-import { getAllPostIds, getPostData } from "../../lib/posts";
-import Head from "next/head";
-import Date from "../../components/date";
-import utilStyles from "../../styles/utils.module.css";
-
+import { notFound } from "next/navigation";
+import { getAllPostIds, getPostData } from "../../../lib/posts";
 import ReactMarkdown from "react-markdown";
 import remarkGfm from "remark-gfm";
 import { Prism as SyntaxHighlighter } from "react-syntax-highlighter";
 import { prism } from "react-syntax-highlighter/dist/cjs/styles/prism";
+import Date from "../../../components/date";
+import Layout from "../../../components/blog/layout";
+import utilStyles from "../../../styles/utils.module.css";
+import Head from "next/head";
 
 const CodeBlock = ({ language, codestring }) => {
   return (
@@ -17,7 +17,17 @@ const CodeBlock = ({ language, codestring }) => {
   );
 };
 
-export default function Post({ postData }) {
+export async function generateStaticParams() {
+  const paths = getAllPostIds();
+  console.log("Generated paths:", paths);
+  return paths.map((path) => ({ id: path.params.id }));
+}
+
+export default async function Post({ params }) {
+  console.log("Fetching post data for ID:", params.id);
+  const postData = await getPostData(params.id);
+  console.log("Fetched post data:", postData);
+
   return (
     <Layout>
       <Head>
@@ -28,7 +38,6 @@ export default function Post({ postData }) {
         <div className={utilStyles.lightText}>
           <Date dateString={postData.date} />
         </div>
-
         <ReactMarkdown
           remarkPlugins={[remarkGfm]}
           components={{
@@ -49,26 +58,7 @@ export default function Post({ postData }) {
         >
           {postData.content}
         </ReactMarkdown>
-
-        {/* <div dangerouslySetInnerHTML={{ __html: postData.content }} /> */}
       </article>
     </Layout>
   );
-}
-
-export async function getStaticPaths() {
-  const paths = getAllPostIds();
-  return {
-    paths,
-    fallback: false,
-  };
-}
-
-export async function getStaticProps({ params }) {
-  const postData = await getPostData(params.id);
-  return {
-    props: {
-      postData,
-    },
-  };
 }
