@@ -16,7 +16,8 @@
     "react-syntax-highlighter": "^15.5.0",
     "remark": "^14.0.2",
     "remark-gfm": "^4.0.0",
-    "remark-html": "^15.0.1"
+    "remark-html": "^15.0.1",
+    "sass": "^1.85.0"
   },
   "engines": {
     "node": ">=18"
