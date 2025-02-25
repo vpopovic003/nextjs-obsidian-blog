@@ -1,12 +1,12 @@
 import { notFound } from "next/navigation";
-import { getAllPostIds, getPostData } from "../../../lib/posts";
+import { getAllPostIds, getPostData } from "@/lib/posts";
 import ReactMarkdown from "react-markdown";
 import remarkGfm from "remark-gfm";
 import { Prism as SyntaxHighlighter } from "react-syntax-highlighter";
 import { prism } from "react-syntax-highlighter/dist/cjs/styles/prism";
-import Date from "../../../components/date";
-import Layout from "../../../components/blog/layout";
-import utilStyles from "../../../styles/utils.module.css";
+import Date from "@/components/date";
+import Layout from "@/components/blog/layout";
+import utilStyles from "@/styles/utils.module.css";
 import Head from "next/head";
 
 const CodeBlock = ({ language, codestring }) => {

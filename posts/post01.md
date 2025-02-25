@@ -5,7 +5,7 @@ date: 2025-02-23T00:00:00.000Z
 hero_image: /norris-niman-iceland.jpg
 ---
 
-Today I am looking for a way to start a new website using Obsidian as my publishing tool for blog and diary. I am mainly a tech guy, but I want to probably expand the niche of the website to, basically, myself. There are other fields of my life that I want to blog about.
+Today I am looking for a way to start a new website using **Obsidian** as my publishing tool for blog and diary. I am mainly a tech guy, but I want to probably expand the niche of the website to, basically, myself. There are other fields of my life that I want to blog about.
 
 Now, I am stuck with layout, design and the technology the I am going to use.
 
@@ -28,3 +28,13 @@ Looking through the options of using technologies for making my markdown (.md) n
 Off course, Obsidian offers it's own solution with Obsidian Publish, but as a developer I want to find my own way (probably a professional deformity).
 
 I went dozens of blog posts and videos on this subject, and finally came to conclusion that i need to create a workflow, so to copy the notes I want to publish to a separate Git repo, and then push them to GitHub. In this way I will be able to use the pushed notes as a sort of CMS (content management system) for the blog on my website.
+
+Another problem I was facing, was how to display images on my blog. After many hours, I found a solution, but on the lookout for the information I found a great starting project for blog from Neil Mathew ([[https://www.neilmathew.co/]]).
+
+He generously open sourced his project, so I forked it, and later built my own version upon his project by adding a home page and top bar for navigation. I decided to keep the things simple for start, and later make the page more "feature-full".
+
+This is the link to his project: [[https://github.com/nmathew87/nextjs-obsidian-blog]]
+
+That's it for now.
+
+More to come...!

@@ -1,3 +1,7 @@
+* {
+  box-sizing: border-box;
+}
+
 html,
 body {
   padding: 0;
@@ -18,12 +22,6 @@ body {
   font-size: 18px;
 }
 
-* {
-  box-sizing: border-box;
-  margin: 0;
-  padding: 0;
-}
-
 a {
   color: #0070f3;
   text-decoration: none;
@@ -41,4 +39,8 @@ img {
 code {
   font-size: 0.8rem !important;
   line-height: 1rem;
+}
+
+ul {
+  padding: 0;
 }

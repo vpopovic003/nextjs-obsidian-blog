@@ -7,7 +7,7 @@ const menu = [
     menuTitle: "Home",
   },
   {
-    menuItem: "blog",
+    menuItem: "/blog",
     menuTitle: "Blog",
   },
   {
