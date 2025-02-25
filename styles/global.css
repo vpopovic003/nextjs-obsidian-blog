@@ -20,6 +20,8 @@ body {
 
 * {
   box-sizing: border-box;
+  margin: 0;
+  padding: 0;
 }
 
 a {
@@ -39,4 +41,4 @@ img {
 code {
   font-size: 0.8rem !important;
   line-height: 1rem;
-} 
+}
