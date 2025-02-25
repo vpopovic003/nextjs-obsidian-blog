@@ -19,14 +19,12 @@ const CodeBlock = ({ language, codestring }) => {
 
 export async function generateStaticParams() {
   const paths = getAllPostIds();
-  console.log("Generated paths:", paths);
   return paths.map((path) => ({ id: path.params.id }));
 }
 
 export default async function Post({ params }) {
-  console.log("Fetching post data for ID:", params.id);
   const postData = await getPostData(params.id);
-  console.log("Fetched post data:", postData);
+
 
   return (
     <Layout>
