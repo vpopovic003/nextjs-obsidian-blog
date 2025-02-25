@@ -12,10 +12,11 @@ Now, I am stuck with layout, design and the technology the I am going to use.
 There are some interesting designs that I ran across, such as:
 
 https://yomaru.dev
+
 ![[Pastedimage20250223163838.png]]
-![Pasted image 20250223163838.png](/obsidian_images/Pasted image 20250223163838.png)
 
 https://obsidianttrpgtutorials.com/
+
 ![[Pastedimage20250223163934.png]]
 
 I am still thinking, should I use my existing website (which might not be the best suited for this project, but I might adapt it), or making a completely new website.
