@@ -1,4 +1,3 @@
-import { notFound } from "next/navigation";
 import { getAllPostIds, getPostData } from "@/lib/posts";
 import ReactMarkdown from "react-markdown";
 import remarkGfm from "remark-gfm";
