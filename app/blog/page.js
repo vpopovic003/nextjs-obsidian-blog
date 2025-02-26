@@ -5,8 +5,8 @@ import { getSortedPostsData } from "../../lib/posts";
 import Link from "next/link";
 import Date from "../../components/date";
 
-export default function Home() {
-  const allPostsData = getSortedPostsData();
+export default async function Home() {
+  const allPostsData = await getSortedPostsData();
   return (
     <Layout home>
       <Head>

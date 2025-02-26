@@ -18,12 +18,13 @@ const CodeBlock = ({ language, codestring }) => {
 };
 
 export async function generateStaticParams() {
-  const paths = getAllPostIds();
+  const paths = await getAllPostIds();
   return paths.map((path) => ({ id: path.params.id }));
 }
 
 export default async function Post({ params }) {
-  const postData = await getPostData(params.id);
+  const { id } = await params;
+  const postData = await getPostData(id);
 
   return (
     <Layout>
