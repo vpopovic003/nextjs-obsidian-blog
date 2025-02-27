@@ -29,3 +29,10 @@ export default async function Home() {
     </Layout>
   );
 }
+
+export async function generateStaticParams() {
+  const posts = await getSortedPostsData();
+  return posts;
+}
+// Re-fetch S3 data every 60 seconds
+export const revalidate = 60;
