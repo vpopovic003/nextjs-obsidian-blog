@@ -21,8 +21,8 @@ const Nav = () => {
     <div className={styles["nav"]}>
       <ul className={styles["nav__menu-items"]}>
         {menu.map((item) => (
-          <Link href={item.menuItem}>
-            <li key={menu.item}>{item.menuTitle}</li>
+          <Link key={item.menuTitle} href={item.menuItem}>
+            <li>{item.menuTitle}</li>
           </Link>
         ))}
       </ul>

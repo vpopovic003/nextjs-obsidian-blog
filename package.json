@@ -1,8 +1,7 @@
 {
   "private": true,
   "scripts": {
-    "copy-images": "node scripts/copy-obsidian-images.js",
-    "build": "npm run copy-images && next build",
+    "build": "next build",
     "dev": "next dev",
     "start": "next start"
   },
